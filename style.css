@@ -1,0 +1,200 @@
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, Arial, sans-serif;
+  background: #FFF9F2; /* Тёплый бежевый фон */
+  color: #333;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ── Шапка (верхняя коричневая полоса) ─────── */
+.top-bar {
+  background: #A34B22; /* Коричневый цвет */
+  color: #FFF;
+  padding: 0.6rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+/* ── Меню (кнопки под полосой) ─────────────── */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+nav a {
+  background: #FFF;
+  color: #442D21;
+  border: 1px solid #A34B22;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+nav a:hover {
+  background: #A34B22;
+  color: #FFF;
+}
+
+/* ── Контент ───────────────────────────────── */
+main {
+  flex: 1; /* Прижимает футер к низу */
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem 2rem 1.5rem;
+  width: 100%;
+}
+
+h1 {
+  color: #A34B22;
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+h2 { color: #A34B22; margin-top: 0; }
+
+/* ── Каталог (карточки) ────────────────────── */
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.catalog .card {
+  flex: 1 1 100%;
+  background: #FFF;
+  border: 2px solid #A34B22;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 650px) {
+  .catalog .card {
+    flex: 1 1 calc(50% - 1.5rem); /* Две в ряд на десктопе */
+  }
+}
+
+/* Контейнер для картинок БЕЗ серого фона */
+.img-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.img-box img {
+  max-width: 100%;
+  height: auto;
+}
+
+.specs {
+  background: #A34B22;
+  color: #FFF;
+  font-weight: bold;
+  padding: 0.6rem 1rem;
+  margin: 0 0 1rem 0;
+  border-radius: 2px;
+}
+
+.description {
+  background: #FEF5D3;
+  color: #5E4128;
+  padding: 1rem;
+  margin: 0;
+  border-radius: 4px;
+}
+
+/* ── Форма ─────────────────────────────────── */
+form {
+  background: #FFF;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 500px;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  font-weight: bold;
+  margin-bottom: 1.2rem;
+  color: #333;
+}
+
+form input[type="number"],
+form textarea,
+form select {
+  padding: 0.6rem;
+  border: 1px solid #999;
+  border-radius: 4px;
+  font: inherit;
+  font-weight: normal;
+  width: 100%;
+}
+form textarea { min-height: 80px; resize: vertical; }
+
+/* Стилизация ползунка */
+.range-field { margin-bottom: 1.2rem; }
+.range-field label { margin-bottom: 0.2rem; }
+input[type=range] {
+  width: 100%;
+  accent-color: #A34B22; /* Коричневый ползунок */
+  cursor: pointer;
+}
+.range-text {
+  font-size: 0.95rem;
+  color: #444;
+  margin-top: 0.2rem;
+}
+
+/* Чекбоксы */
+.checkbox-row {
+  flex-direction: row !important;
+  align-items: center;
+  gap: 0.5rem !important;
+  font-weight: normal !important;
+  cursor: pointer;
+  margin-bottom: 0.8rem !important;
+}
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #A34B22;
+}
+
+/* Кнопка и фокус */
+button[type="submit"] {
+  background: #A34B22;
+  color: #FFF;
+  border: 2px solid #A34B22;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+button[type="submit"]:hover { background: #8A3D1A; }
+
+:focus {
+  outline: 3px solid #C2410C;
+  outline-offset: 2px;
+}
+
+/* ── Футер (подпись внизу) ─────────────────── */
+footer {
+  padding: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}

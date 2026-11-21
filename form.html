@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма — Вариант 05</title>
+</head>
+<body>
+  <h1>Оформление заказа — Вариант 05</h1>
+
+  <!-- Форма. ВАЖНО: без novalidate, чтобы работала встроенная проверка -->
+  <form method="get">
+    <div>
+      <label for="item">Выберите позицию:</label>
+      <select id="item" required>
+        <option value="" disabled selected>Выберите из списка</option>
+        <option value="item1">Путешествие к морю</option>
+        <option value="item2">Вторая карточка</option>
+        <option value="item3">Третья карточка</option>
+      </select>
+    </div>
+
+    <div style="margin-top: 10px;">
+      <label for="quantity">Количество:</label>
+      <!-- type="number", min, step: встроенная проверка браузера -->
+      <input type="number" id="quantity" min="1" step="1" required>
+    </div>
+
+    <div style="margin-top: 15px;">
+      <button type="submit">Отправить</button>
+    </div>
+
+    <!-- Абзац для вывода сообщения (сразу после кнопки, внутри формы) -->
+    <p id="result" role="status" aria-live="polite"></p>
+  </form>
+
+  <!-- Подключение скрипта -->
+  <script src="form.js" defer></script>
+</body>
+</html>

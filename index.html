@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Вариант 05 — Книжная полка</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    .search-box { margin-bottom: 20px; }
+    input { padding: 5px; }
+    button { padding: 5px 10px; cursor: pointer; }
+    #output { margin-top: 20px; padding: 10px; background: #f0f0f0; border-radius: 5px; white-space: pre-wrap; }
+    #welcomeMsg { margin-top: 30px; color: green; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Книжная полка — Вариант 05</h1>
+
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Введите название...">
+    <button id="searchBtn">Найти</button>
+    <button id="resetBtn">Сбросить</button>
+  </div>
+
+  <div id="output"></div>
+
+  <!-- НОВЫЙ БЛОК: сюда выведется приветствие через JS -->
+  <div id="welcomeMsg"></div>
+
+  <script src="catalog.js" defer></script>
+</body>
+</html> 
